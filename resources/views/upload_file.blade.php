@@ -43,29 +43,29 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"></script>
 <script>
-    // $(function () {
-    //     $(document).ready(function () {
-    //         $.ajaxSetup({
-    //             headers: {
-    //                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    //             }
-    //         });
-    //         $('#formUpload').ajaxForm({
-    //             beforeSend: function () {
-    //                 var percentage = '0';
-    //             },
-    //             uploadProgress: function (event, position, total, percentComplete) {
-    //                 var percentage = percentComplete;
-    //                 $('.progress .progress-bar').css("width", percentage+'%', function() {
-    //                     return $(this).attr("aria-valuenow", percentage) + "%";
-    //                 })
-    //             },
-    //             complete: function (xhr) {
-    //                 console.log('File has uploaded');
-    //             }
-    //         });
-    //     });
-    // });
+    $(function () {
+        $(document).ready(function () {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $('#formUpload').ajaxForm({
+                beforeSend: function () {
+                    var percentage = '0';
+                },
+                uploadProgress: function (event, position, total, percentComplete) {
+                    var percentage = percentComplete;
+                    $('.progress .progress-bar').css("width", percentage+'%', function() {
+                        return $(this).attr("aria-valuenow", percentage) + "%";
+                    })
+                },
+                complete: function (xhr) {
+                    console.log('File has uploaded');
+                }
+            });
+        });
+    });
 
 </script>
 

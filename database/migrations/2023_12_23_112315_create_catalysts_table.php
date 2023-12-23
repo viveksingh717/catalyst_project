@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCatalysts extends Migration
+class CreateCatalystsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,7 +15,6 @@ class CreateCatalysts extends Migration
     {
         Schema::create('catalysts', function (Blueprint $table) {
             $table->id();
-            $table->string('cId');
             $table->string('name');
             $table->string('domain');
             $table->string('year_founded');

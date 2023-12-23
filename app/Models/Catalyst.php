@@ -11,5 +11,5 @@ class Catalyst extends Model
 
     protected $table = 'catalysts';
 
-    protected $fillable = ['cId','name', 'domain', 'year_founded', 'industry', 'size_range', 'locality', 'country', 'linkedin_url', 'current_employee_estimate', 'total_employee_estimate'];
+    protected $fillable = ['name', 'domain', 'year_founded', 'industry', 'size_range', 'locality', 'country', 'linkedin_url', 'current_employee_estimate', 'total_employee_estimate'];
 }
